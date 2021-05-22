@@ -11,11 +11,13 @@ namespace TransitioningContentControlTest001.ViewModels
     {
         public ICommand LoadContent1Command { get; }
         public ICommand LoadContent2Command { get; }
+        public ICommand LoadContent3Command { get; }
 
         public MainViewModel()
         {
             LoadContent1Command = new ActionCommand(() => Content = new Content1ViewModel());
             LoadContent2Command = new ActionCommand(() => Content = new Content2ViewModel());
+            LoadContent3Command = new ActionCommand(() => Content = new Content3ViewModel());
         }
 
         public ViewModelBase Content
