@@ -19,9 +19,13 @@
         <DataTemplate DataType="{x:Type vm:Content2ViewModel}">
             <uc:Content2UserControl />
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:Content3ViewModel}">
+            <uc:Content2UserControl />
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
@@ -30,5 +34,6 @@
         <mah:TransitioningContentControl Content="{Binding Content}" />
         <Button Grid.Row="1" Content="Content1" Command="{Binding LoadContent1Command}" />
         <Button Grid.Row="2" Content="Content2" Command="{Binding LoadContent2Command}" />
+        <Button Grid.Row="3" Content="Content3" Command="{Binding LoadContent2Command}" />
     </Grid>
 </mah:MetroWindow>
